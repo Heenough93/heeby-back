@@ -1,9 +1,14 @@
-import express from 'express';
-import cors from 'cors';
+import express, { Request, Response } from 'express';
+import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-import userRoutes from './routes/userRoutes';
-import { PORT } from './config/env';
+
 import { AppDataSource } from './data-source';
+import cors from './configs/cors';
+import authRoute from './routes/auth';
+import usersRoute from './routes/users';
+import postsRoute from './routes/posts';
+import tracksRoute from './routes/tracks';
+import { ErrorHandler } from './http/middlewares/ErrorHandler';
 
 
 // 환경변수 로드
@@ -12,8 +17,9 @@ dotenv.config();
 const app = express();
 
 // 미들웨어 설정
-app.use(cors());
-app.use(express.json());
+app.use(cors);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // 기본 라우트
 app.get('/', (req, res) => {
@@ -21,7 +27,19 @@ app.get('/', (req, res) => {
 });
 
 // 라우트 추가
-app.use('/users', userRoutes);
+app.use('/auth', authRoute);
+app.use('/users', usersRoute);
+app.use('/posts', postsRoute);
+app.use('/tracks', tracksRoute);
+
+app.use('*', (req: Request, res: Response) => {
+  return res.status(404).json({
+    success: false,
+    message: 'Invalid route',
+  });
+});
+
+app.use(ErrorHandler.handleErrors);
 
 // 데이터베이스 연결
 AppDataSource.initialize()
@@ -29,6 +47,7 @@ AppDataSource.initialize()
       console.log('📌 Database connected successfully!');
 
       // 서버 실행
+      const PORT = process.env.PORT || 3000;
       app.listen(PORT, () => {
         console.log(`🚀 Server is running on http://localhost:${PORT}`);
       });
