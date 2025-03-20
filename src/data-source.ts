@@ -12,7 +12,7 @@ export const AppDataSource = new DataSource({
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
   synchronize: true,
-  dropSchema: true,
+  // dropSchema: true,
   logging: true,
   entities: [__dirname + '/entities/*.ts'], // 엔티티 경로
 });
