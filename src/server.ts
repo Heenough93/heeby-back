@@ -13,6 +13,7 @@ import { ErrorHandler } from './http/middlewares/ErrorHandler';
 
 // 환경변수 로드
 dotenv.config();
+const PORT = process.env.APP_PORT || 3000;
 
 const app = express();
 
@@ -47,7 +48,6 @@ AppDataSource.initialize()
       console.log('📌 Database connected successfully!');
 
       // 서버 실행
-      const PORT = process.env.APP_PORT || 3000;
       app.listen(PORT, () => {
         console.log(`🚀 Server is running on http://localhost:${PORT}`);
       });
