@@ -44,13 +44,10 @@ app.use(ErrorHandler.handleErrors);
 
 // 데이터베이스 연결
 AppDataSource.initialize()
-    .then(() => {
+    .then(async () => {
       console.log('📌 Database connected successfully!');
     })
-    .catch((error) => {
-      console.error('❌ Database connection failed:', error);
-      console.error('Error message:', error.message);
-    });
+    .catch((error) => console.error('❌ Database connection failed:', error));
 
 // 서버 실행
 app.listen(PORT, () => {
