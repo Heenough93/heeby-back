@@ -46,10 +46,13 @@ app.use(ErrorHandler.handleErrors);
 AppDataSource.initialize()
     .then(() => {
       console.log('📌 Database connected successfully!');
-
-      // 서버 실행
-      app.listen(PORT, () => {
-        console.log(`🚀 Server is running on http://localhost:${PORT}`);
-      });
     })
-    .catch((error) => console.error('❌ Database connection failed:', error));
+    .catch((error) => {
+      console.error('❌ Database connection failed:', error);
+      console.error('Error message:', error.message);
+    });
+
+// 서버 실행
+app.listen(PORT, () => {
+  console.log(`🚀 Server is running on http://localhost:${PORT}`);
+});
