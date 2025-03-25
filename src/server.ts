@@ -7,6 +7,9 @@ import usersRoute from './routes/users';
 import postsRoute from './routes/posts';
 import tracksRoute from './routes/tracks';
 import { ErrorHandler } from './http/middlewares/ErrorHandler';
+// FIXME: temp data
+import tracks from "./tracks";
+import posts from "./posts";
 
 
 const app = express();
@@ -26,6 +29,14 @@ app.use('/auth', authRoute);
 app.use('/users', usersRoute);
 app.use('/posts', postsRoute);
 app.use('/tracks', tracksRoute);
+
+// FIXME: temp api
+app.post('/track/find-tracks', (req, res) => {
+  res.send({ data: tracks } );
+});
+app.post('/post/find-posts', (req, res) => {
+  res.send({ data: posts } );
+});
 
 app.use('*', (req: Request, res: Response) => {
   return res.status(404).json({
