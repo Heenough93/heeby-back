@@ -886,7 +886,7 @@ const tracks = [
     "city": "Salar de Uyuni",
     "country": "Bolivia",
     "flag": "🇧🇴",
-    "lat": "--20.16076",
+    "lat": "-20.16076",
     "lng": "-67.41783",
     "id": "99"
   },
