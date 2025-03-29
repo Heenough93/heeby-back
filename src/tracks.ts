@@ -898,6 +898,69 @@ const tracks = [
     "lat": "-20.46171",
     "lng": "-66.82161",
     "id": "100"
+  },
+  {
+    "date": "2025-03-27",
+    "city": "Salar de Uyuni",
+    "country": "Bolivia",
+    "flag": "🇧🇴",
+    "lat": "-20.16076",
+    "lng": "-67.41783",
+    "id": "101"
+  },
+  {
+    "date": "2025-03-27",
+    "city": "Uyuni",
+    "country": "Bolivia",
+    "flag": "🇧🇴",
+    "lat": "-20.46171",
+    "lng": "-66.82161",
+    "id": "102"
+  },
+  {
+    "date": "2025-03-28",
+    "city": "San Cristobal",
+    "country": "Bolivia",
+    "flag": "🇧🇴",
+    "lat": "-21.15512",
+    "lng": "-67.16547",
+    "id": "103"
+  },
+  {
+    "date": "2025-03-28",
+    "city": "Reserva Nacional de Fauna Andina Eduardo Avaroa",
+    "country": "Bolivia",
+    "flag": "🇧🇴",
+    "lat": "-22.26387",
+    "lng": "-67.81618",
+    "id": "104"
+  },
+  {
+    "date": "2025-03-29",
+    "city": "Regional de Migración Hito Cajones",
+    "country": "Bolivia",
+    "flag": "🇧🇴",
+    "lat": "-22.88026",
+    "lng": "-67.79827",
+    "id": "105"
+  },
+  {
+    "date": "2025-03-29",
+    "city": "Paso Fronterizo Hito Cajón Chile",
+    "country": "Chile",
+    "flag": "🇨🇱",
+    "lat": "-22.91656",
+    "lng": "-67.79792",
+    "id": "106"
+  },
+  {
+    "date": "2025-03-29",
+    "city": "Atacama",
+    "country": "Chile",
+    "flag": "🇨🇱",
+    "lat": "-22.90877",
+    "lng": "-68.19846",
+    "id": "107"
   }
 ];
 
