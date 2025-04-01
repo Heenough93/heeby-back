@@ -14,12 +14,5 @@ export const AppDataSource = new DataSource({
   synchronize: false,
   // dropSchema: true,
   logging: true,
-  entities: [__dirname + '/entities/*.ts'], // 엔티티 경로
-  extra: {
-    connectTimeout: 10000, // 10초 (기본값보다 늘림)
-    acquireTimeout: 10000,
-    waitForConnections: true,
-    connectionLimit: 10, // 적절히 조정
-    queueLimit: 0
-  }
+  entities: [__dirname + '/entities/*.ts'],
 });
