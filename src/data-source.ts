@@ -14,5 +14,5 @@ export const AppDataSource = new DataSource({
   synchronize: false,
   // dropSchema: true,
   logging: true,
-  entities: [__dirname + '/entities/*.ts'],
+  entities: ['src/entities/**/*.{js,ts}'],
 });
