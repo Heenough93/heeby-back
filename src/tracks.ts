@@ -970,6 +970,33 @@ const tracks = [
     "lat": "-22.45395",
     "lng": "-68.92921",
     "id": "108"
+  },
+  {
+    "date": "2025-04-02",
+    "city": "Santiago",
+    "country": "Chile",
+    "flag": "🇨🇱",
+    "lat": "-33.45197",
+    "lng": "-70.66736",
+    "id": "109"
+  },
+  {
+    "date": "2025-04-03",
+    "city": "Puerto Montt",
+    "country": "Chile",
+    "flag": "🇨🇱",
+    "lat": "-41.46929",
+    "lng": "-72.93996",
+    "id": "110"
+  },
+  {
+    "date": "2025-04-03",
+    "city": "Puerto Natales",
+    "country": "Chile",
+    "flag": "🇨🇱",
+    "lat": "-51.72623",
+    "lng": "-72.50641",
+    "id": "111"
   }
 ];
 
